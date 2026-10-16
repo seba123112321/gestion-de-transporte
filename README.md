@@ -52,6 +52,11 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+Las migraciones crean las tablas en MySQL. Para cargar una ruta de ejemplo,
+ejecuta `scripts/sql/datos_ejemplo.sql` en phpMyAdmin después de aplicar las
+migraciones. El script no duplica la ruta si ya existe; reemplaza los valores
+del `INSERT` por tus datos cuando quieras registrar otros.
+
 ## API CRUD
 
 La raíz del router muestra los recursos disponibles en `http://127.0.0.1:8000/api/`.
